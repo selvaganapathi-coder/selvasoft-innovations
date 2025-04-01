@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SelvaSoft Innovations - Welcome</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lottie Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.6/lottie.min.js"></script>
+
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: #1a1a2e; /* Dark Purple */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    #lottie-container {
+      width: 100%;
+      max-width: 400px;
+      margin: auto;
+    }
+
+    .start-button {
+      background-color: #F26A2E; /* Orange */
+      padding: 12px 24px;
+      font-size: 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .start-button:hover {
+      background-color: #F7B731; /* Yellow */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="flex flex-col items-center justify-center w-full px-6">
+    <!-- Lottie Animation -->
+    <div id="lottie-container"></div>
+
+    <!-- Text Content -->
+    <h1 class="text-3xl font-bold mt-6">Welcome to SelvaSoft Innovations!</h1>
+    <p class="text-lg text-gray-300 mt-2">We create fun and exciting apps & games! 🚀🎮</p>
+
+    <div class="flex">
+      <button class="btn start-button" onclick="location.href='./portfolio/index.html'">📂 Portfolio</button>
+      <button class="btn start-button" onclick="location.href='./projects/index.html'">📱 Projects</button>
+    </div>
+  </div>
+
+  <script>
+    // Load Lottie Animation
+    lottie.loadAnimation({
+      container: document.getElementById('lottie-container'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'https://lottie.host/365a17fa-ce45-4d42-8304-f5c6e191505b/gjdgpagl5n.json' // Replace with your Lottie file URL
+    });
+
+    // Redirect to Portfolio
+    document.getElementById('start-btn').addEventListener('click', () => {
+      window.location.href = '/portfolio'; // Update with your actual portfolio path
+    });
+  </script>
+
+</body>
+</html>
